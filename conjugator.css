@@ -1,0 +1,281 @@
+* {box-sizing: border-box; border: 0;}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+/* Sets font for all text -- for some reason button and input do not inherit from body */
+body, button, input {font-family: 'Roboto', Helvetica, Verdana, Arial, sans-serif;}
+
+/* Sets font-size and text color */
+p, a, button, input {
+  font-size: 20px;
+  color: hsl(0, 0%, 95%);
+}
+p, a {margin: 0;}
+
+/* Main tile headings */
+h1 {
+  font-size: 12px;
+  margin: 0;
+  color: hsl(120, 40%, 50%); /* green */
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(0, 0%, 20%);
+  margin: 0px;
+}
+
+
+
+/* Autocpmplete stuff */
+
+/* WHAT IS THIS? */
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown list container */
+.autocomplete-items {
+  position: absolute;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color:  hsl(0, 0%, 40%);
+  color: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: hsl(0, 0%, 30%);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: hsl(0, 0%, 50%);
+}
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: hsl(0, 0%, 50%) !important;
+  color: #ffffff;
+}
+/* END autocomplete stuff */
+
+/* Header stuff */
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  /* Keeps heqder from shrinking vertically on small screen WHY?*/
+  flex-shrink: 0;
+  background-color: hsl(0, 0%, 40%);
+}
+#left-link-container, #right-link-container {
+  display: flex;
+  flex: 1;
+  /* align-items: center; */
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/* Removes underline on links */
+header a {text-decoration: none;}
+header a:hover {color: hsl(0, 0%, 80%);}
+/* right-justifies header right side contact link */
+#right-link-container {justify-content: flex-end;}
+/* Keeps input and button true-centered and together */
+#input-button-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 600px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+#arrow-textbox-and-arrow-container {
+  display: flex;
+  flex: 1;
+  padding-right: 5px;
+
+}
+#arrow-textbox {
+  outline: none;
+  border: 0px;
+  padding: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  margin: 0px;
+  margin-right: 0px;
+  justify-content: center;
+  flex: 1;
+  background-color: hsl(0, 0%, 30%);
+  /* eliminates fine line between text-box and arrow */
+  margin-right: -.4px;
+  /* smoothes overlap */
+  border-top-right-radius: 1px;
+  border-bottom-right-radius: 1px;
+}
+#arrow {
+    width: 10px;
+    background-color: hsl(0, 0%, 30%);
+    clip-path: polygon(0% 0, 0 100%, 100% 50%);
+}
+#button-flex-container{
+  display: flex;
+  padding-left: 5px;
+}
+#large-button {cursor: pointer;}
+#large-button {
+  outline: none;
+  border: 0px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-right: 0px;
+  justify-content: center;
+  flex: 1;
+}
+#input-parent {
+  /* Necessary to take role as parent to <input> for autocomplete */
+  position: relative;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+input {
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 0;
+}
+#small-button {
+  outline: none;
+  border: 0px;
+  border-radius: 5px;
+  padding: 9px;
+  justify-content: center;
+}
+
+ /* green */
+button {background-color: hsl(120, 40%, 50%);}
+ /* slightly darker green */
+button:hover {background-color: hsl(120, 40%, 45%);}
+
+/* Main stuff */
+main {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  flex-shrink: 0;
+  margin-top: 65px; /* FIX THIS see header position fixed and width */
+
+}
+#all-tile-container {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin: 5px;
+  width: 600px;
+}
+.three-tile-group-container {
+  display: flex;
+  /* justify-content: center; */
+}
+.tile {
+  flex: 1;
+  margin: 5px;
+  border-radius: 5px;
+  padding: 10px;
+}
+footer {
+  flex-shrink: 0;
+  padding-bottom: 10px;
+  padding-top: 5px;
+  text-align: center;
+  background-color: hsl(0, 0%, 40%);
+}
+i {vertical-align: middle;}
+
+
+.tile, input {background-color: hsl(0, 0%, 30%);}
+
+/* About page centerd text box */
+#about-main-text-container {
+  border-radius: 5px;
+  background-color: hsl(0, 0%, 30%);
+  padding: 10px;
+  margin: 10px;
+  max-width: 600px;
+}
+
+#footer-heading {
+  color: hsl(120, 40%, 50%);
+  font-size: 34px;
+  font-weight: bold;
+}
+
+#footer-subtitle {font-size: 16px;}
+#footer-copyright {font-size: 12px;}
+
+/* Small screen defaults */
+#large-button {display: none;}
+#arrow-textbox {display: none;}
+#arrow-textbox-and-arrow-container {display: none}
+
+.three-tile-group-container {flex-direction: column;}
+.all-tile-container {flex: 1;}
+
+/* Large screen */
+@media only screen and (min-width: 600px) {
+  #arrow-textbox {display: inherit;}
+  #arrow-textbox-and-arrow-container {display: inherit}
+  #small-button {display: none;}
+  #large-button {display: inherit;}
+
+  .three-tile-group-container {flex-direction: row;}
+  #input-parent {
+    width: 33.33%;
+  }
+  #button-flex-container{
+    flex: 1;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
