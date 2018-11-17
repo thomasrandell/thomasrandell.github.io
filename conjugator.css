@@ -107,13 +107,14 @@ header a:hover {color: hsl(0, 0%, 80%);}
   padding-left: 5px;
   padding-right: 5px;
 }
-#arrow-textbox-and-arrow-container {
+#arrow-flex-container {
   display: flex;
   flex: 1;
   padding-right: 5px;
 
 }
-#arrow-textbox {
+#arrow {
+  clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
   outline: none;
   border: 0px;
   padding: 10px;
@@ -130,11 +131,8 @@ header a:hover {color: hsl(0, 0%, 80%);}
   border-top-right-radius: 2px;
   border-bottom-right-radius: 2px;
 }
-#arrow {
-    width: 10px;
-    background-color: hsl(0, 0%, 30%);
-    clip-path: polygon(0% 0, 0 100%, 100% 50%);
-}
+
+
 #button-flex-container{
   display: flex;
   padding-left: 5px;
@@ -235,16 +233,16 @@ i {vertical-align: middle;}
 
 /* Small screen defaults */
 #large-button {display: none;}
-#arrow-textbox {display: none;}
-#arrow-textbox-and-arrow-container {display: none}
+#arrow {display: none;}
+#arrow-flex-container {display: none}
 
 .three-tile-group-container {flex-direction: column;}
 .all-tile-container {flex: 1;}
 
 /* Large screen */
 @media only screen and (min-width: 600px) {
-  #arrow-textbox {display: inherit;}
-  #arrow-textbox-and-arrow-container {display: inherit}
+  #arrow {display: inherit;}
+  #arrow-flex-container {display: inherit}
   #small-button {display: none;}
   #large-button {display: inherit;}
 
