@@ -94,6 +94,7 @@ header {
 /* Removes underline on links */
 header a {text-decoration: none;}
 header a:hover {color: hsl(0, 0%, 80%);}
+header a:active {color: hsl(0, 0%, 70%);}
 /* right-justifies header right side contact link */
 #right-link-container {justify-content: flex-end;}
 /* Keeps input and button true-centered and together */
@@ -172,6 +173,7 @@ input {
 button {background-color: hsl(120, 40%, 50%);}
  /* slightly darker green */
 button:hover {background-color: hsl(120, 40%, 45%);}
+button:active {background-color: hsl(120, 40%, 40%);}
 
 /* Main stuff */
 main {
