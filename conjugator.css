@@ -92,9 +92,10 @@ header {
   margin-right: 10px;
 }
 /* Removes underline on links */
-header a {text-decoration: none;}
-header a:hover {color: hsl(0, 0%, 80%);}
+header a {text-decoration: none; outline: none;}
+header a:hover, :focus {color: hsl(0, 0%, 80%);}
 header a:active {color: hsl(0, 0%, 70%);}
+
 /* right-justifies header right side contact link */
 #right-link-container {justify-content: flex-end;}
 /* Keeps input and button true-centered and together */
@@ -173,6 +174,8 @@ input {
 button {background-color: hsl(120, 40%, 50%);}
  /* slightly darker green */
 button:hover {background-color: hsl(120, 40%, 45%);}
+/* This has a different effect than :hover FIX THIS */
+button:focus {background-color: hsl(120, 40%, 45%);}
 button:active {background-color: hsl(120, 40%, 40%);}
 
 /* Main stuff */
@@ -213,7 +216,10 @@ footer {
 i {vertical-align: middle;}
 
 
-.tile, input {background-color: hsl(0, 0%, 30%);}
+.tile {background-color: hsl(0, 0%, 30%);}
+input {background-color: hsl(0, 0%, 30%);}
+/* input:focus {background-color: hsl(0, 0%, 30%);} */
+
 
 /* About page centerd text box */
 #about-main-text-container {
