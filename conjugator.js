@@ -266,7 +266,9 @@ input.addEventListener("keyup", function(event) {
   }
 });
 
-
+$(document).ready(function() {
+    $("input:text").click(function() { $(this).select(); } );
+});
 
 
 
