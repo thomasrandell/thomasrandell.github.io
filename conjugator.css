@@ -175,8 +175,8 @@ button {background-color: hsl(120, 40%, 50%);}
  /* slightly darker green */
 button:hover {background-color: hsl(120, 40%, 45%);}
 /* This has a different effect than :hover FIX THIS */
-button:focus {background-color: hsl(120, 40%, 45%);}
-button:active {background-color: hsl(120, 40%, 40%);}
+/* button:focus {background-color: hsl(120, 40%, 45%);} */
+/* button:active {background-color: hsl(120, 40%, 40%);} */
 
 /* Main stuff */
 main {
