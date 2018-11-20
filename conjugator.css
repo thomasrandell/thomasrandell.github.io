@@ -157,8 +157,18 @@ header a:active {color: hsl(0, 0%, 70%);}
   padding-left: 5px;
   padding-right: 5px;
 }
+/* Safari fix */
 input {
   -webkit-appearance: textfield;
+}
+/* Allows cancel button but removes rounded styling */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input {
   outline: none;
   padding: 10px;
   width: 100%;
@@ -234,13 +244,14 @@ input {background-color: hsl(0, 0%, 30%);}
 }
 
 #footer-heading {
+  font-family: Roboto Condensed;
   color: hsl(120, 40%, 50%);
   font-size: 34px;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
-#footer-subtitle {font-size: 16px;}
-#footer-copyright {font-size: 12px;}
+#footer-subtitle {font-size: 16px; font-family: Roboto Condensed;}
+#footer-copyright {font-size: 12px; font-family: Roboto Condensed;}
 
 /* Small screen defaults */
 #large-button {display: none;}
