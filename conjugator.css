@@ -161,11 +161,11 @@ header a:active {color: hsl(0, 0%, 70%);}
 input {
   -webkit-appearance: textfield;
 }
-/* Allows cancel button but removes rounded styling */
+/* Allows cancel button but removes rounded styling DOESN'T WORK ON MOBILE */
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
-  display: none;
+  -webkit-appearance: none;
 }
 
 input {
