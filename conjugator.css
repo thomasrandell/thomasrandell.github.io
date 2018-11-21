@@ -18,7 +18,7 @@ p, a {margin: 0;}
 h1 {
   font-size: 12px;
   margin: 0;
-  color: hsl(120, 40%, 50%); /* green */
+  color: hsl(142, 100%, 30%); /* Brazil flag green */
 }
 body {
   display: flex;
@@ -175,10 +175,11 @@ input {
   justify-content: center;
 }
 
+
  /* green */
-button {background-color: hsl(120, 40%, 50%);}
+button {background-color: hsl(142, 100%, 30%);}
  /* slightly darker green */
-button:hover {background-color: hsl(120, 40%, 45%);}
+button:hover {background-color: hsl(142, 100%,25%);}
 /* This has a different effect than :hover FIX THIS */
 /* button:focus {background-color: hsl(120, 40%, 45%);} */
 /* button:active {background-color: hsl(120, 40%, 40%);} */
@@ -238,7 +239,7 @@ input {background-color: hsl(0, 0%, 30%);}
 #footer-heading {
   font-family: Roboto Condensed;
   font-weight: bold;
-  color: hsl(120, 40%, 50%);
+  color: #009b3a;
   font-size: 34px;
   /* font-weight: bold; */
 }
