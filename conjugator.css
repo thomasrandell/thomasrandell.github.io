@@ -159,7 +159,7 @@ header a:active {color: hsl(0, 0%, 70%);}
 }
 /* Safari fix */
 input {
-  -webkit-appearance: textfield;
+  /* -webkit-appearance: textfield; */
 }
 /* Allows cancel button but removes rounded styling DOESN'T WORK ON MOBILE */
 input[type="search"]::-webkit-search-decoration,
