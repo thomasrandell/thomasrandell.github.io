@@ -157,17 +157,6 @@ header a:active {color: hsl(0, 0%, 70%);}
   padding-left: 5px;
   padding-right: 5px;
 }
-/* Safari fix */
-input {
-  /* -webkit-appearance: textfield; */
-}
-/* Allows cancel button but removes rounded styling DOESN'T WORK ON MOBILE */
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  -webkit-appearance: none;
-}
-
 input {
   outline: none;
   padding: 10px;
