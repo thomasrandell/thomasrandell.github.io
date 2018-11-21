@@ -168,7 +168,10 @@ input {
   outline: none;
   border: 0px;
   border-radius: 5px;
-  padding: 9px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  padding-right: 14px;
   justify-content: center;
 }
 
@@ -234,6 +237,7 @@ input {background-color: hsl(0, 0%, 30%);}
 
 #footer-heading {
   font-family: Roboto Condensed;
+  font-weight: bold;
   color: hsl(120, 40%, 50%);
   font-size: 34px;
   /* font-weight: bold; */
