@@ -1,4 +1,6 @@
 
+
+
 $(document).ready(function () {
 
 //BEGIN regular verb dictionaries
@@ -452,3 +454,66 @@ function irConjugate(irInfinitive) {
 }); // END of $(document).ready(function() {})
 
 // END of .js doc
+
+
+
+
+
+
+
+
+
+(function(){
+    // Slide In Panel - by CodyHouse.co
+	var panelTriggers = document.getElementsByClassName('js-cd-panel-trigger');
+	if( panelTriggers.length > 0 ) {
+		for(var i = 0; i < panelTriggers.length; i++) {
+			(function(i){
+				var panelClass = 'js-cd-panel-'+panelTriggers[i].getAttribute('data-panel'),
+					panel = document.getElementsByClassName(panelClass)[0];
+				// open panel when clicking on trigger btn
+				panelTriggers[i].addEventListener('click', function(event){
+					event.preventDefault();
+					addClass(panel, 'cd-panel--is-visible');
+				});
+				//close panel when clicking on 'x' or outside the panel
+				panel.addEventListener('click', function(event){
+					if( hasClass(event.target, 'js-cd-close') || hasClass(event.target, panelClass)) {
+						event.preventDefault();
+						removeClass(panel, 'cd-panel--is-visible');
+					}
+				});
+			})(i);
+		}
+	}
+
+	//class manipulations - needed if classList is not supported
+	//https://jaketrent.com/post/addremove-classes-raw-javascript/
+	function hasClass(el, className) {
+	  	if (el.classList) return el.classList.contains(className);
+	  	else return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+	}
+	function addClass(el, className) {
+	 	if (el.classList) el.classList.add(className);
+	 	else if (!hasClass(el, className)) el.className += " " + className;
+	}
+	function removeClass(el, className) {
+	  	if (el.classList) el.classList.remove(className);
+	  	else if (hasClass(el, className)) {
+	    	var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+	    	el.className=el.className.replace(reg, ' ');
+	  	}
+	}
+})();
+
+
+// CodyHouse slide-in panel info:
+//
+// Copyright 2018 Amber Creative Lab Ltd, CodyHouse.co
+//
+// Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+//
+// Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+// Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+// Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
