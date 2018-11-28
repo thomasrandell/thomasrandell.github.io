@@ -8,7 +8,7 @@ html, body {
 body, button, input {font-family: 'Roboto', Helvetica, Verdana, Arial, sans-serif;}
 
 /* Sets font-size and text color */
-p, a, button, input {
+p, a, button, input, .autocomplete-items div {
   font-size: 20px;
   color: hsl(0, 0%, 95%);
 }
@@ -47,11 +47,13 @@ body {
   left: 0;
   right: 0;
   background-color:  hsl(0, 0%, 40%);
+  /* background-color:  blue; */
   color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
+/* each matching array item's div */
 .autocomplete-items div {
   padding: 10px;
   cursor: pointer;
@@ -109,65 +111,35 @@ header a:active {color: hsl(0, 0%, 70%);}
   padding-left: 5px;
   padding-right: 5px;
 }
-#arrow-flex-container {
-  display: flex;
-  flex: 1;
-  padding-right: 5px;
 
-}
-#arrow {
-  clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
-  -webkit-clip-path: polygon(0% 0%, 90% 0, 100% 50%, 90% 100%, 0% 100%);
-
-  outline: none;
-  border: 0px;
-  padding: 10px;
-  border-radius: 5px;
-  border-top-right-radius: 5px;
-  margin: 0px;
-  margin-right: 0px;
-  justify-content: center;
-  flex: 1;
-  background-color: hsl(0, 0%, 30%);
-  /* eliminates fine line between text-box and arrow */
-  margin-right: -.5px;
-  /* smoothes overlap */
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-}
-
-
-#button-flex-container{
-  display: flex;
-  padding-left: 5px;
-}
-#large-button {cursor: pointer;}
 #large-button {
+  cursor: pointer;
   outline: none;
   border: 0px;
   padding: 10px;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   margin-right: 0px;
   justify-content: center;
-  flex: 1;
+  /* flex: 1; */
+  width: 33.33%;
 }
-#input-parent {
-  /* Necessary to take role as parent to <input> for autocomplete */
-  position: relative;
-  padding-left: 5px;
-  padding-right: 5px;
-}
+
 input {
   outline: none;
   padding: 10px;
-  width: 100%;
-  border-radius: 5px;
+  flex: 1;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
   border: 0;
+  /* gets rid of default styling on Safari */
+  -webkit-appearance: none;
 }
 #small-button {
   outline: none;
   border: 0px;
-  border-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 14px;
@@ -249,26 +221,14 @@ input {background-color: hsl(0, 0%, 30%);}
 
 /* Small screen defaults */
 #large-button {display: none;}
-#arrow {display: none;}
-#arrow-flex-container {display: none}
-
 .three-tile-group-container {flex-direction: column;}
 .all-tile-container {flex: 1;}
 
 /* Large screen */
 @media only screen and (min-width: 600px) {
-  #arrow {display: inherit;}
-  #arrow-flex-container {display: inherit}
   #small-button {display: none;}
   #large-button {display: inherit;}
-
   .three-tile-group-container {flex-direction: row;}
-  #input-parent {
-    width: 33.33%;
-  }
-  #button-flex-container{
-    flex: 1;
-  }
 }
 
 

@@ -115,6 +115,7 @@ var irregularDictionary = [ser, ir, ter]; // FIX IR VERB, -IR TYPE CONFUSION
 // END irregular verb dictionaries
 
 // BEGIN js functions
+
 // BEGIN autocomplete functions from w3schools.com
 function autocomplete(inp, arr) {
   /* inp = document.getElementById("input") */
@@ -152,7 +153,7 @@ function autocomplete(inp, arr) {
 
             // console.log(b);
 
-            /*make the matching letters bold:*/
+            /*make the matching letters bold: THIS IS NOT WORKING */
             b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
             b.innerHTML += arr[i].substr(val.length);
             /*insert a input field that will hold the current array item's value:*/
@@ -240,16 +241,16 @@ autocomplete(document.getElementById("input"), regularVerbs);
 // BEGIN NAV functions
 // When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar
 
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("topnav").style.top = "0";
-  } else {
-    document.getElementById("topnav").style.top = "-50px";
-  }
-  prevScrollpos = currentScrollPos;
-}
+// var prevScrollpos = window.pageYOffset;
+// window.onscroll = function() {
+//   var currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     document.getElementById("topnav").style.top = "0";
+//   } else {
+//     document.getElementById("topnav").style.top = "-50px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// }
 // END NAV functions
 
 
