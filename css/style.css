@@ -78,7 +78,7 @@ body {
 
 header {
   position: fixed;
-  width: 100%;
+  width: 100% !important;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -128,6 +128,7 @@ header a:active {color: hsl(0, 0%, 70%);}
 
 input {
   outline: none;
+  /* width: 20px; */
   padding: 10px;
   flex: 1;
   border-radius: 0;
