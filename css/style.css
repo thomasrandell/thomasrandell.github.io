@@ -122,6 +122,8 @@ header a:active {color: hsl(0, 0%, 70%);}
   border-bottom-right-radius: 5px;
   margin-right: 0px;
   justify-content: center;
+  margin: 0; /* eliminates margin in Safari */
+
   /* flex: 1; */
   /* width: 33%; */
 }
@@ -130,6 +132,7 @@ input {
   outline: none;
   /* this lets the input shrink without blocking header from shrinking */
   width: 100%;
+  margin: 0;
   padding: 10px;
   flex: 1;
   border-radius: 0;
@@ -138,10 +141,11 @@ input {
   border: 0;
   margin: 0;
   /* gets rid of default styling on Safari OR NOT */
-  /* -webkit-appearance: none; */
+  -webkit-appearance: none;
 }
 #small-button {
   outline: none;
+  margin: 0;  /* eliminates margin in Safari */
   border: 0px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
