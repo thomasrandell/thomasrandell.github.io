@@ -129,7 +129,7 @@ header a:active {color: hsl(0, 0%, 70%);}
 input {
   outline: none;
   padding: 10px;
-  flex: 1;
+  /* flex: 1; */
   border-radius: 0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
