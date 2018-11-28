@@ -83,7 +83,7 @@ header {
   align-items: center;
   padding: 10px;
   /* Keeps heqder from shrinking vertically on small screen WHY?*/
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
   background-color: hsl(0, 0%, 40%);
 }
 #left-link-container, #right-link-container {
@@ -122,7 +122,7 @@ header a:active {color: hsl(0, 0%, 70%);}
   margin-right: 0px;
   justify-content: center;
   /* flex: 1; */
-  /* width: 33.33%; */
+  width: 33.33%;
 }
 
 input {
