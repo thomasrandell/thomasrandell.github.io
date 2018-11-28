@@ -82,8 +82,8 @@ header {
   display: flex;
   align-items: center;
   padding: 10px;
-  /* Keeps heqder from shrinking vertically on small screen WHY?*/
-  /* flex-shrink: 0; */
+  /* Keeps heqder from shrinking vertically on small screen WHY? NO EFFECT */
+  flex-shrink: 0;
   background-color: hsl(0, 0%, 40%);
 }
 #left-link-container, #right-link-container {
@@ -110,6 +110,7 @@ header a:active {color: hsl(0, 0%, 70%);}
   width: 600px;
   padding-left: 5px;
   padding-right: 5px;
+  background-color: yellow;
 }
 
 #large-button {
@@ -129,6 +130,7 @@ input {
   outline: none;
   padding: 10px;
   flex: 1;
+  border-radius: 0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: 0;
