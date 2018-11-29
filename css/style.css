@@ -110,7 +110,6 @@ header a:active {color: hsl(0, 0%, 70%);}
   justify-content: center;
   box-sizing: border-box;
   width: 600px;
-  padding: 5px;
   background-color: yellow;
 }
 
@@ -176,7 +175,7 @@ main {
   align-items: center;
   flex-grow: 1;
   flex-shrink: 0;
-  margin-top: 65px; /* FIX THIS see header position fixed and width */
+  margin-top: 70px; /* FIX THIS see header position fixed and width */
 
 }
 #all-tile-container {
