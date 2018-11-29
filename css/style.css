@@ -47,10 +47,9 @@ body {
   left: 0;
   right: 0;
   background-color:  hsl(0, 0%, 40%);
-  /* background-color:  blue; */
-  color: white;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  padding: 5px;
 }
 
 /* each matching array item's div */
@@ -58,19 +57,19 @@ body {
   padding: 10px;
   cursor: pointer;
   background-color: hsl(0, 0%, 30%);
-  border-radius: 5px;
-  margin: 5px;
+  border-bottom: solid;
+  border-bottom-width: thin;
+  border-bottom-color: hsl(0, 0%, 40%);
 }
 
 .autocomplete-items div:hover {
   /*when hovering an item:*/
-  background-color: hsl(0, 0%, 50%);
+  background-color: hsl(0, 0%, 40%);
 }
 
 .autocomplete-active {
   /*when navigating through the items using the arrow keys:*/
-  background-color: hsl(0, 0%, 50%) !important;
-  color: #ffffff;
+  background-color: hsl(0, 0%, 40%) !important;
 }
 /* END autocomplete stuff */
 
@@ -81,7 +80,9 @@ header {
   width: 100%;
   display: flex;
   align-items: center;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
   /* Keeps heqder from shrinking vertically on small screen WHY? NO EFFECT */
   flex-shrink: 0;
   background-color: hsl(0, 0%, 40%);
@@ -92,6 +93,7 @@ header {
   /* align-items: center; */
   margin-left: 10px;
   margin-right: 10px;
+  background-color: blue;
 }
 /* Removes underline on links */
 header a {text-decoration: none; outline: none;}
@@ -107,9 +109,8 @@ header a:active {color: hsl(0, 0%, 70%);}
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  /* width: 600px; */
-  padding-left: 5px;
-  padding-right: 5px;
+  width: 600px;
+  padding: 5px;
   background-color: yellow;
 }
 
@@ -120,9 +121,10 @@ header a:active {color: hsl(0, 0%, 70%);}
   padding: 10px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
-  margin-right: 0px;
+  margin: 0px;
   justify-content: center;
   margin: 0; /* eliminates margin in Safari */
+  width: 33%;
 
   /* flex: 1; */
   /* width: 33%; */
@@ -132,9 +134,10 @@ input {
   outline: none;
   /* this lets the input shrink without blocking header from shrinking */
   width: 100%;
+  /* width: 66%; */
   margin: 0;
   padding: 10px;
-  flex: 1;
+  /* flex: 1; */
   border-radius: 0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
@@ -180,7 +183,7 @@ main {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  margin: 5px;
+  padding: 5px;
   width: 600px;
 }
 .three-tile-group-container {
@@ -189,10 +192,10 @@ main {
 }
 .tile {
   flex: 1;
-  margin: 5px;
-  border-radius: 5px;
+  margin: 2.5px;
   padding: 10px;
 }
+
 footer {
   flex-shrink: 0;
   padding-bottom: 10px;
@@ -237,7 +240,20 @@ input {background-color: hsl(0, 0%, 30%);}
 @media only screen and (min-width: 600px) {
   #small-button {display: none;}
   #large-button {display: inherit;}
+  input {width: 66.66%;}
   .three-tile-group-container {flex-direction: row;}
+  #tile-1 {
+    border-top-left-radius: 5px;
+  }
+  #tile-3 {
+    border-top-right-radius: 5px;
+  }
+  #tile-7 {
+    border-bottom-left-radius: 5px;
+  }
+  #tile-9 {
+    border-bottom-right-radius: 5px;
+  }
 }
 
 
