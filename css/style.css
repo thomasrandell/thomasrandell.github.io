@@ -7,15 +7,15 @@ html, body {
 /* Sets font for all text -- for some reason button and input do not inherit from body */
 body, button, input {font-family: 'Roboto', Helvetica, Verdana, Arial, sans-serif;}
 
-/* Sets font-size and text color */
-p, a, button, input, .autocomplete-items div {
+/* Sets font-size and text color NEED TO CLEAN THIS UP AND USE PROPER H1s FOR MAIN ICONS? */
+p, a, button, input, .autocomplete-items div, .cd-panel__header h1  {
   font-size: 20px;
   color: hsl(0, 0%, 95%);
 }
 p, a {margin: 0;}
 
 /* Main tile headings */
-h1 {
+.tile h1 {
   font-size: 12px;
   margin: 0;
   color: hsl(142, 100%, 30%); /* Brazil flag green */
@@ -93,10 +93,10 @@ header {
   /* align-items: center; */
   padding-left: 10px;
   padding-right: 10px;
-  /* background-color: blue; */
+  background-color: blue;
 }
 /* Removes underline on links */
-header a {text-decoration: none; outline: none;}
+/* header a {text-decoration: none; outline: none;} */
 header a:hover, :focus {color: hsl(0, 0%, 80%);}
 header a:active {color: hsl(0, 0%, 70%);}
 
@@ -235,29 +235,6 @@ input {background-color: hsl(0, 0%, 30%);}
 .three-tile-group-container {flex-direction: column;}
 .all-tile-container {flex: 1;}
 
-/* Large screen */
-@media only screen and (min-width: 600px) {
-  #left-link-container, #right-link-container {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  #small-button {display: none;}
-  #large-button {display: inherit;}
-  input {width: 66.66%;}
-  .three-tile-group-container {flex-direction: row;}
-  #tile-1 {
-    border-top-left-radius: 5px;
-  }
-  #tile-3 {
-    border-top-right-radius: 5px;
-  }
-  #tile-7 {
-    border-bottom-left-radius: 5px;
-  }
-  #tile-9 {
-    border-bottom-right-radius: 5px;
-  }
-}
 
 
 
@@ -289,11 +266,6 @@ Slide In Panel - by CodyHouse.co
 -------------------------------- */
 
 
-/* @media only screen and (min-width: 1170px) {
-  .cd-main-content h1 {
-    font-size: 3.2rem;
-  }
-} */
 
 .cd-panel {
   position: fixed;
@@ -307,7 +279,7 @@ Slide In Panel - by CodyHouse.co
 }
 
 .cd-panel::after {
-  /* overlay layer */
+  /* overlay layer WHAT IS THIS */
   content: '';
   position: absolute;
   top: 0;
@@ -335,28 +307,26 @@ Slide In Panel - by CodyHouse.co
 
 .cd-panel__header {
   position: fixed;
-  width: 90%;
-  height: 50px;
-  line-height: 50px;
-  /* I added this becasue header title went full left */
-  padding-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%; /* default width */
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: hsl(0, 0%, 40%);
-
   z-index: 2;
-  /* -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08); */
-  /* This drops the header down once the panel is open */
+  /* drops the header down once the panel is open */
   -webkit-transition: -webkit-transform 0.3s 0s;
-  transition: -webkit-transform 0.3s 0s;
-  transition: transform 0.3s 0s;
   transition: transform 0.3s 0s, -webkit-transform 0.3s 0s;
-  -webkit-transform: translateY(-50px);
-      -ms-transform: translateY(-50px);
-          transform: translateY(-50px);
+  -webkit-transform: translateY(-70px);
+      -ms-transform: translateY(-70px);
+          transform: translateY(-70px);
 }
 
 .cd-panel__header h1 {
   color: hsl(0, 0%, 95%);
+  background-color: blue;
   /* same as main button text */
   font-size: 20px;
 }
@@ -370,6 +340,7 @@ Slide In Panel - by CodyHouse.co
 }
 
 .cd-panel--is-visible .cd-panel__header {
+  /* what does this do? */
   -webkit-transition: -webkit-transform 0.3s 0.3s;
   transition: -webkit-transform 0.3s 0.3s;
   transition: transform 0.3s 0.3s;
@@ -379,44 +350,25 @@ Slide In Panel - by CodyHouse.co
           transform: translateY(0px);
 }
 
-@media only screen and (min-width: 768px) {
-  .cd-panel__header {
-    width: 70%;
-  }
-}
-
-@media only screen and (min-width: 1170px) {
-  .cd-panel__header {
-    width: 50%;
-  }
-}
 
 .cd-panel__close {
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 100%;
-  width: 60px;
-  /* image replacement WHAT DOES THIS DO?  */
-  /* display: inline-block;
-  overflow: hidden;
-  text-indent: 100%;
-  white-space: nowrap; */
+  background-color: blue;
 }
 
 .cd-panel__close:hover {
-  /* color of X link block on hover */
-  background-color: hsl(0, 0%, 35%);;
+  /* color of X icon on hover */
+  color: hsl(0, 0%, 80%);
 }
 
 .cd-panel__container {
   position: fixed;
-  width: 90%;
+  width: 90%; /* default width */
   height: 100%;
   top: 0;
   /* panel background color */
   background-color: hsl(0, 0%, 30%);
   z-index: 1;
+  /* slides the panel out from edge */
   -webkit-transition: -webkit-transform 0.3s 0.3s;
   transition: -webkit-transform 0.3s 0.3s;
   transition: transform 0.3s 0.3s;
@@ -454,38 +406,41 @@ Slide In Panel - by CodyHouse.co
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .cd-panel__header {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-panel__header {
+    width: 50%;
+  }
+}
+
 .cd-panel__content {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 70px 5%;
+  padding: 20px;
+  padding-top: 90px;
+
   overflow: auto;
   /* smooth scrolling on touch devices */
   -webkit-overflow-scrolling: touch;
 }
 
-.cd-panel__content p {
-  /* font-size: 1.4rem; */
-  /* panel text color */
-  color: hsl(0, 0%, 95%);
-  /* small screen */
-  line-height: 1.2;
-  /* margin: 2em 0; */
-}
 
 .cd-panel__content p:first-of-type {
   margin-top: 0;
 }
 
-@media only screen and (min-width: 768px) {
-  .cd-panel__content p {
-    /* font-size: 1.6rem; */
-    /* large screen line height */
+.cd-panel__content p {
     line-height: 1.2;
   }
-}
+
 
 
 /* CodyHouse slide-in panel info:
@@ -498,3 +453,34 @@ Redistributions of source code must retain the above copyright notice, this list
 Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
 Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. */
+
+
+
+
+/* Large screen */
+@media only screen and (min-width: 600px) {
+  #left-link-container, #right-link-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #small-button {display: none;}
+  #large-button {display: inherit;}
+  input {width: 66.66%;}
+  .three-tile-group-container {flex-direction: row;}
+  #tile-1 {
+    border-top-left-radius: 5px;
+  }
+  #tile-3 {
+    border-top-right-radius: 5px;
+  }
+  #tile-7 {
+    border-bottom-left-radius: 5px;
+  }
+  #tile-9 {
+    border-bottom-right-radius: 5px;
+  }
+  /* .cd-panel__header {
+    padding-left: 20px;
+    padding-right: 20px;
+  } */
+}
