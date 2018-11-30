@@ -237,10 +237,6 @@ input {background-color: hsl(0, 0%, 30%);}
 
 /* Large screen */
 @media only screen and (min-width: 600px) {
-  header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
   #left-link-container, #right-link-container {
     padding-left: 20px;
     padding-right: 20px;
@@ -248,7 +244,6 @@ input {background-color: hsl(0, 0%, 30%);}
   #small-button {display: none;}
   #large-button {display: inherit;}
   input {width: 66.66%;}
-  main {margin-top: 85px;}
   .three-tile-group-container {flex-direction: row;}
   #tile-1 {
     border-top-left-radius: 5px;
@@ -294,11 +289,11 @@ Slide In Panel - by CodyHouse.co
 -------------------------------- */
 
 
-@media only screen and (min-width: 1170px) {
+/* @media only screen and (min-width: 1170px) {
   .cd-main-content h1 {
     font-size: 3.2rem;
   }
-}
+} */
 
 .cd-panel {
   position: fixed;
@@ -343,6 +338,7 @@ Slide In Panel - by CodyHouse.co
   width: 90%;
   height: 50px;
   line-height: 50px;
+  padding-left: 10px;
   background-color: hsl(0, 0%, 40%);
 
   z-index: 2;
