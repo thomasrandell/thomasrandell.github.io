@@ -5,7 +5,9 @@ html, body {
 }
 
 /* Sets font for all text -- for some reason button and input do not inherit from body */
-body, button, input {font-family: 'Roboto', Helvetica, Verdana, Arial, sans-serif;}
+body, button, input {
+  font-family: 'Roboto', Helvetica, Verdana, Arial, sans-serif;
+}
 
 /* Sets font-size and text color NEED TO CLEAN THIS UP AND USE PROPER H1s FOR MAIN ICONS? */
 p, a, button, input, .autocomplete-items div, .cd-panel__header h1  {
@@ -90,7 +92,6 @@ header {
 #left-link-container, #right-link-container {
   display: flex;
   flex: 1;
-  /* align-items: center; */
   padding-left: 10px;
   padding-right: 10px;
   background-color: blue;
@@ -102,7 +103,7 @@ header a:active {color: hsl(0, 0%, 70%);}
 
 /* right-justifies header right side contact link */
 #right-link-container {justify-content: flex-end;}
-/* Keeps input and button true-centered and together */
+/* keeps input and button true-centered and together */
 #input-button-container {
   position: relative;
   display: flex;
@@ -110,7 +111,7 @@ header a:active {color: hsl(0, 0%, 70%);}
   justify-content: center;
   box-sizing: border-box;
   width: 600px;
-  /* background-color: yellow; */
+  background-color: yellow;
 }
 
 #large-button {
@@ -124,26 +125,21 @@ header a:active {color: hsl(0, 0%, 70%);}
   justify-content: center;
   margin: 0; /* eliminates margin in Safari */
   width: 33%;
-
-  /* flex: 1; */
-  /* width: 33%; */
 }
 
 input {
   outline: none;
   /* this lets the input shrink without blocking header from shrinking */
   width: 100%;
-  /* width: 66%; */
   margin: 0;
   padding: 10px;
-  /* flex: 1; */
   border-radius: 0;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
   border: 0;
-  margin: 0;
   /* gets rid of default styling on Safari OR NOT */
   -webkit-appearance: none;
+
 }
 #small-button {
   outline: none;
@@ -167,15 +163,30 @@ button:hover {background-color: hsl(142, 100%,25%);}
 /* button:focus {background-color: hsl(120, 40%, 45%);} */
 /* button:active {background-color: hsl(120, 40%, 40%);} */
 
+/* fills in space behind header */
+#header-spacer {
+  /* change spacer padding when changing header padding */
+  padding: 22px;
+  text-align: center;
+  background-color: blue;
+}
+/* change spacer p font size when changing header font size */
+#header-spacer p {
+  /* same color as body background color */
+  color: hsl(0, 0%, 20%);
+}
+
 /* Main stuff */
 main {
   padding: 0px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-grow: 1;
   flex-shrink: 0;
-  margin-top: 65px; /* FIX THIS see header position fixed and width */
+  /* FIX THIS see header position fixed and width */
+  /* margin-top: 65px; */
 
 }
 #all-tile-container {
@@ -187,7 +198,8 @@ main {
 }
 .three-tile-group-container {
   display: flex;
-  /* justify-content: center; */
+  /* keeps tiles center justified when text exceeds container width */
+  justify-content: center;
 }
 .tile {
   flex: 1;
@@ -367,6 +379,7 @@ Slide In Panel - by CodyHouse.co
   top: 0;
   /* panel background color */
   background-color: hsl(0, 0%, 30%);
+  /* background-color: blue; */
   z-index: 1;
   /* slides the panel out from edge */
   -webkit-transition: -webkit-transform 0.3s 0.3s;
@@ -426,10 +439,10 @@ Slide In Panel - by CodyHouse.co
   height: 100%;
   padding: 20px;
   padding-top: 90px;
-
   overflow: auto;
   /* smooth scrolling on touch devices */
   -webkit-overflow-scrolling: touch;
+  /* background-color: green; */
 }
 
 
