@@ -94,7 +94,7 @@ header {
   flex: 1;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: blue;
+  /* background-color: blue; */
 }
 /* Removes underline on links */
 /* header a {text-decoration: none; outline: none;} */
@@ -111,7 +111,7 @@ header a:active {color: hsl(0, 0%, 70%);}
   justify-content: center;
   box-sizing: border-box;
   width: 600px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 #large-button {
@@ -168,7 +168,7 @@ button:hover {background-color: hsl(142, 100%,25%);}
   /* change spacer padding when changing header padding */
   padding: 22px;
   text-align: center;
-  background-color: blue;
+  /* background-color: blue; */
 }
 /* change spacer p font size when changing header font size */
 #header-spacer p {
@@ -338,7 +338,7 @@ Slide In Panel - by CodyHouse.co
 
 .cd-panel__header h1 {
   color: hsl(0, 0%, 95%);
-  background-color: blue;
+  /* background-color: blue; */
   /* same as main button text */
   font-size: 20px;
 }
@@ -364,7 +364,7 @@ Slide In Panel - by CodyHouse.co
 
 
 .cd-panel__close {
-  background-color: blue;
+  /* background-color: blue; */
 }
 
 .cd-panel__close:hover {
