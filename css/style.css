@@ -91,9 +91,9 @@ header {
   display: flex;
   flex: 1;
   /* align-items: center; */
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: blue;
+  padding-left: 10px;
+  padding-right: 10px;
+  /* background-color: blue; */
 }
 /* Removes underline on links */
 header a {text-decoration: none; outline: none;}
@@ -110,7 +110,7 @@ header a:active {color: hsl(0, 0%, 70%);}
   justify-content: center;
   box-sizing: border-box;
   width: 600px;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 #large-button {
@@ -175,7 +175,7 @@ main {
   align-items: center;
   flex-grow: 1;
   flex-shrink: 0;
-  margin-top: 70px; /* FIX THIS see header position fixed and width */
+  margin-top: 65px; /* FIX THIS see header position fixed and width */
 
 }
 #all-tile-container {
@@ -237,9 +237,18 @@ input {background-color: hsl(0, 0%, 30%);}
 
 /* Large screen */
 @media only screen and (min-width: 600px) {
+  header {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  #left-link-container, #right-link-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
   #small-button {display: none;}
   #large-button {display: inherit;}
   input {width: 66.66%;}
+  main {margin-top: 85px;}
   .three-tile-group-container {flex-direction: row;}
   #tile-1 {
     border-top-left-radius: 5px;
