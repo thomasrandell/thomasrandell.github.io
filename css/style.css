@@ -138,8 +138,8 @@ input {
   border-bottom-left-radius: 5px;
   border: 0;
   margin: 0;
-  /* gets rid of default styling on Safari OR NOT */
-  /* -webkit-appearance: none; */
+  /* gets rid of default styling on Safari */
+  -webkit-appearance: none;
 }
 #small-button {
   outline: none;
