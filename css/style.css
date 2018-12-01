@@ -140,6 +140,7 @@ input {
   margin: 0;
   /* gets rid of default styling on Safari */
   -webkit-appearance: none;
+  text-transform: lowercase;
 }
 #small-button {
   outline: none;
