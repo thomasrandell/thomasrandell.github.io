@@ -117,9 +117,6 @@ var irregularDictionary = [ser, ir, ter]; // FIX IR VERB, -IR TYPE CONFUSION
 // BEGIN js functions
 
 
-function selectText(){
-        document.getElementById("input").select();
-    }
 
 
 
