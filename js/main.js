@@ -117,7 +117,32 @@ var irregularDictionary = [ser, ir, ter]; // FIX IR VERB, -IR TYPE CONFUSION
 // BEGIN js functions
 
 
+////////////////NEW
 
+function irregularCheckAllForms(userEntry) {
+  for (i = 0; i < irregularDictionary.length; i++) { // iterates through irregular dictionary entries array
+    for (j = 0; j < irregularDictionary[i].length; j++) { // iterates through entry's tenses array
+      for (k = 0; k < irregularDictionary[i][j].length; k++) { // iterates through tense's conjugations array
+        if (userEntry == irregularDictionary[i][j][k]) { // compare entry to current conjugation
+          var irregularTenses = irregularDictionary[i];
+          irregularDisplayConjugations(irregularTenses);
+        }
+      }
+    }
+  }
+}
+
+function irregularDisplayConjugations(irregularTenses) {
+		for (i = 0; i < irregularTenses.length; i++) {
+      for (j = 0; j < irregularTenses[i].length; j++) {
+        var irregularConjugation = (irregularTenses[i][j]);
+        var htmlIdIterator = (i*10)+j;
+        $("#" + htmlIdIterator).html(irregularConjugation);
+      }
+    }
+}
+
+/////////////////////////////////////// END NEW
 
 
 
@@ -163,7 +188,7 @@ function autocomplete(inp, arr) {
 
             // console.log(b);
 
-            /*make the matching letters bold: THIS IS NOT WORKING */
+            /*make the matching letters bold:*/
             b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
             b.innerHTML += arr[i].substr(val.length);
             /*insert a input field that will hold the current array item's value:*/
@@ -303,26 +328,38 @@ $('button').click(function(){
    arMatchVerbEnding(userEntry);
    erMatchVerbEnding(userEntry);
    irMatchVerbEnding(userEntry);
-   alertUserDataNotFound();
+   irregularCheckAllForms(userEntry);
+//   alertUserDataNotFound();
 });
 
 
-// $('button').click(function(){
-//    userEntry = $('input').val();
-//    arMatchVerbEnding(userEntry);
-//    erMatchVerbEnding(userEntry);
-//    irMatchVerbEnding(userEntry);
-//    alertUserDataNotFound();
-// });
 
 function alertUserDataNotFound(){
   if (arMatchFound === false && erMatchFound === false && irMatchFound === false){
     alert("No matching verb ending found");
     return;
   } else if (arDictionaryEntryFound === false && erDictionaryEntryFound === false && irDictionaryEntryFound === false){
-    alert("No dictionary entry found");
+    // alert("No dictionary entry found");
+    document.getElementById('input').value = "Entry not found"
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // MATCH VERB ENGING functions
 var arMatchFound = false;
@@ -425,6 +462,18 @@ function irCheckDictionary(irUserEntry){
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
 // CONJUGATE functions
 
 function arConjugate(arInfinitive) {  // regular verb function
@@ -433,7 +482,7 @@ function arConjugate(arInfinitive) {  // regular verb function
       for (j = 0; j < arEndings[i].length; j++){  // Iterates through the endings for the given tense
         var arConjugation = (arStem + arEndings[i][j]);
         var htmlIdIterator = (i*10)+j;
-        $("." + htmlIdIterator).html(arConjugation);
+        $("#" + htmlIdIterator).html(arConjugation);
       }
     }
 }
@@ -444,7 +493,7 @@ function erConjugate(erInfinitive) {
       for (j = 0; j < erEndings[i].length; j++){
         var erConjugation = (erStem + erEndings[i][j]);
         var htmlIdIterator = (i*10)+j;
-        $("." + htmlIdIterator).html(erConjugation);
+        $("#" + htmlIdIterator).html(erConjugation);
       }
     }
 }
@@ -455,7 +504,7 @@ function irConjugate(irInfinitive) {
       for (j = 0; j < irEndings[i].length; j++){
         var irConjugation = (irStem + irEndings[i][j]);
         var htmlIdIterator = (i*10)+j;
-        $("." + htmlIdIterator).html(irConjugation);
+        $("#" + htmlIdIterator).html(irConjugation);
       }
     }
 }
