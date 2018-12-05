@@ -465,16 +465,16 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
   #large-button {display: inherit;}
   input {width: 66.66%;}
   .three-tile-group-container {flex-direction: row;}
-  #tile-1 {
+  .tile-1 {
     border-top-left-radius: 5px;
   }
-  #tile-3 {
+  .tile-3 {
     border-top-right-radius: 5px;
   }
-  #tile-7 {
+  .tile-7 {
     border-bottom-left-radius: 5px;
   }
-  #tile-9 {
+  .tile-9 {
     border-bottom-right-radius: 5px;
   }
   /* .cd-panel__header {

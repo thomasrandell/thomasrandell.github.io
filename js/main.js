@@ -51,7 +51,7 @@ var erNonFinite = ["er", "endo", "ido"],  // index.html <p> ids: 0, 1, 2; others
 
 var erEndings = [erNonFinite, erPresent, erImperfect, erPreterite, erPresentSubj, erImperfectSubj, erFutureSubj, erConditional, erFuture, erSimplePluperfect];
 
-// Endings for -ir verbs:
+// Endings for -ir verbs CHANGE THESE SO THEY DON'T CONFLICT WITH IRREGULAR VERB ir :
 var irNonFinite = ["ir", "indo", "ido"],
     irPresent = ["o", "e", "imos", "em"],
     irImperfect = ["ia", "ia", "íamos", "íam"],
@@ -111,7 +111,7 @@ var irNonFinite = ["ir", "indo", "ido"],
 
 var ir = [irNonFinite, irPresent, irImperfect, irPreterite, irPresentSubj, irImperfectSubj, irFutureSubj, irConditional, irFuture, irPluperfect];
 
-var irregularDictionary = [ser, ir, ter]; // FIX IR VERB, -IR TYPE CONFUSION
+var irregularDictionary = [ser, ter, ir, ter]; // FIX IR VERB, -IR TYPE CONFUSION
 // END irregular verb dictionaries
 
 // BEGIN js functions
@@ -141,6 +141,34 @@ function irregularDisplayConjugations(irregularTenses) {
       }
     }
 }
+
+
+
+
+
+// 1sg pret + pres subj
+
+// -car: c > qu / _e
+
+carVerbs = ["ficar", "colocar", "explicar", "tocar", "significar", "buscar", "marcar", "provocar", "publicar", "verificar", "indicar", "dedicar", "aplicar", "identificar", "praticar", "destacar", "atacar", "trocar", "justificar", "comunicar", "prejudicar", "modificar", "criticar", "deslocar", "implicar", "arrancar", "fabricar", "brincar", "convocar", "classificar", "arriscar", "multiplicar", "cercar", "complicar", "embarcar", "secar", "chocar", "picar", "desembarcar", "reivindicar", "educar", "sacrificar", "pescar", "invocar", "evocar", "especificar", "intensificar", "sufocar", "abdicar", "sacar", "edificar"]
+
+var carNonFinite = ["car", "cando", "cado"], // index.html <p> ids: 0, 1, 2
+    carPresent = ["co", "ca", "camos", "cam"], // index.html <p> ids: 10, 11, 12, 13
+    carImperfect = ["cava", "cava", "cávamos", "cavam"], // index.html <p> ids: 20, 21, 22, 23
+    carPreterite = ["quei", "cou", "camos", "caram"], // index.html <p> ids: 30, 31, 32, 33
+    carPresentSubj = ["que", "que", "quemos", "quem"], // index.html <p> ids: 40, 41, 42, 43
+    carImperfectSubj = ["casse", "casse", "cássemos", "cassem"], // index.html <p> ids: 50, 51, 52, 53
+    carFutureSubj = ["car", "car", "carmos", "carem"], // index.html <p> ids: 60, 61, 62, 63
+    carConditional = ["caria", "caria", "caríamos", "cariam"], // index.html <p> ids: 70, 71, 72, 73
+    carFuture = ["carei", "cará", "caremos", "carão"], // index.html <p> ids: 80, 81, 82, 83
+    carSimplePluperfect = ["cara", "cara", "caramos", "caram"]; // index.html <p> ids: 90, 91, 92, 93
+
+var carEndings = [carNonFinite, carPresent, carImperfect, carPreterite, carPresentSubj, carImperfectSubj, carFutureSubj, carConditional, carFuture, carSimplePluperfect];
+
+
+
+
+
 
 /////////////////////////////////////// END NEW
 
